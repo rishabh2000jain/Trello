@@ -72,6 +72,7 @@ abstract class BaseActivity() : AppCompatActivity(), OnActivityResult ,AuthState
     }
 
     fun showNormalSnackBar(message: String) {
+
         AppUtil.showSnackBar(this, message, SnackBarType.NORMAL)
     }
 
