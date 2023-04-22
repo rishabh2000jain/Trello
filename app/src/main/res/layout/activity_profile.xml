@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    tools:context=".features.profile.ProfileActivity"
+    >
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraint_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <include
+            android:id="@+id/toolbar"
+            layout="@layout/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/profile_img"
+            android:layout_width="@dimen/circular_image_view_height"
+            android:layout_height="@dimen/circular_image_view_height"
+            android:layout_margin="@dimen/common_margin_24"
+            android:src="@drawable/splash_img"
+            app:civ_border_color="?attr/colorSecondary"
+            app:civ_border_width="@dimen/circular_image_view_border"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/toolbar" />
+
+        <ImageView
+            android:id="@+id/profile_edt_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/curved_bg"
+            android:padding="@dimen/common_margin_6"
+            android:src="@drawable/baseline_edit_24"
+            app:layout_constraintBottom_toBottomOf="@id/profile_img"
+            app:layout_constraintEnd_toEndOf="@id/profile_img"
+            app:tint="?attr/colorPrimary" />
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textInputLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/common_margin_24"
+            android:layout_marginTop="@dimen/common_margin_between_edt"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/profile_img">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/name_edt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/name"
+                android:imeOptions="actionNext"
+                android:inputType="textPersonName" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textInputLayout2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/common_margin_24"
+            android:layout_marginTop="@dimen/common_margin_between_edt"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/textInputLayout">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/email_edt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:enabled="false"
+                android:hint="@string/email"
+                android:imeOptions="actionNext"
+                android:inputType="textEmailAddress" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textInputLayout3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/common_margin_24"
+            android:layout_marginTop="@dimen/common_margin_between_edt"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/textInputLayout2">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/phone_edt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/phone"
+                android:imeOptions="actionDone"
+                android:inputType="phone" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.example.trello.commomWidgets.CurvedButton
+            android:id="@+id/reset_btn"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/common_button_size"
+            android:layout_marginHorizontal="@dimen/common_margin_6"
+            android:layout_marginVertical="@dimen/common_margin_24"
+            android:animateLayoutChanges="true"
+            android:visibility="gone"
+            app:buttonBackgroundColor="?attr/colorPrimary"
+            app:buttonFontSize="@dimen/text_small_6"
+            app:buttonTextColor="@color/white"
+            app:cbButtonBackground="@drawable/curved_border_bg"
+            app:cbButtonTitle="@string/reset"
+            app:layout_constraintBottom_toTopOf="@id/barrier"
+            app:layout_constraintEnd_toStartOf="@id/update_btn"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <com.example.trello.commomWidgets.CurvedButton
+            android:id="@+id/update_btn"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/common_button_size"
+            android:layout_marginHorizontal="@dimen/common_margin_6"
+            android:layout_marginVertical="@dimen/common_margin_24"
+            app:buttonBackgroundColor="?attr/colorPrimary"
+            app:buttonFontSize="@dimen/text_small_6"
+            app:buttonTextColor="@color/white"
+            app:cbButtonBackground="@drawable/curved_border_bg"
+            app:cbButtonTitle="@string/common_google_play_services_update_button"
+            app:layout_constraintBottom_toTopOf="@id/barrier"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/reset_btn" />
+
+        <androidx.constraintlayout.widget.Barrier
+            android:id="@+id/barrier"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:barrierDirection="top"
+            app:constraint_referenced_ids="reset_btn,update_btn"
+            app:layout_constraintTop_toBottomOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

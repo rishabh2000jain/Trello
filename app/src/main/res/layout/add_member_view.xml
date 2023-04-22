@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:padding="@dimen/common_margin_24"
+    android:background="?attr/backgroundColor"
+    >
+
+    <TextView
+        android:id="@+id/page_title_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="@dimen/common_margin"
+        android:gravity="center"
+        android:text="@string/add_member"
+        android:textColor="?attr/colorOnPrimary"
+        android:textFontWeight="@integer/weight_400"
+        android:textSize="@dimen/text_medium_20"
+        />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/common_margin_between_edt"
+
+        >
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/member_email_edt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/member_email"
+            android:imeOptions="actionDone"
+            android:inputType="textEmailAddress"
+            />
+    </com.google.android.material.textfield.TextInputLayout>
+    <com.example.trello.commomWidgets.CurvedButton
+        android:id="@+id/add_member_btn"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/common_button_size"
+        android:layout_marginTop="@dimen/common_margin_between_edt_and_btn"
+        app:buttonBackgroundColor="@color/blue"
+        app:buttonFontSize="@dimen/text_small_6"
+        app:buttonTextColor="@color/white"
+        app:cbButtonBackground="@drawable/curved_border_bg"
+        app:cbButtonTitle="@string/add_member"
+        app:layout_constraintBottom_toTopOf="@+id/guideline_hor_end"
+        app:layout_constraintEnd_toStartOf="@+id/guideline_ver_end"
+        app:layout_constraintStart_toStartOf="@+id/guideline_ver_start"
+        app:loaderColor="@color/white"
+        />
+    <com.example.trello.commomWidgets.CurvedButton
+        android:id="@+id/cancel_button"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/common_button_size"
+        android:layout_marginTop="@dimen/common_margin_6"
+        app:buttonBackgroundColor="@color/blue"
+        app:buttonFontSize="@dimen/text_small_6"
+        app:buttonTextColor="@color/white"
+        app:cbButtonBackground="@drawable/curved_border_bg"
+        app:cbButtonTitle="@string/cancel"
+        app:layout_constraintBottom_toTopOf="@+id/guideline_hor_end"
+        app:layout_constraintEnd_toStartOf="@+id/guideline_ver_end"
+        app:layout_constraintStart_toStartOf="@+id/guideline_ver_start"
+        app:loaderColor="@color/white"
+        />
+</LinearLayout>

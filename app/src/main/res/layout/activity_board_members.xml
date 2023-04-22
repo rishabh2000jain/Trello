@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".features.members.BoardMembersActivity">
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/members_list"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="@dimen/common_margin_6"
+        android:layout_weight="0.9"
+        />
+    <com.example.trello.commomWidgets.CurvedButton
+        android:id="@+id/add_member_btn"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/common_button_size"
+        app:buttonBackgroundColor="@color/blue"
+        app:buttonFontSize="@dimen/text_small_6"
+        android:layout_margin="@dimen/common_margin"
+        app:buttonTextColor="@color/white"
+        app:cbButtonBackground="@drawable/curved_border_bg"
+        app:cbButtonTitle="@string/add_member"
+        app:layout_constraintBottom_toTopOf="@+id/guideline_hor_end"
+        app:layout_constraintEnd_toStartOf="@+id/guideline_ver_end"
+        app:layout_constraintStart_toStartOf="@+id/guideline_ver_start"
+        app:loaderColor="@color/white"
+        />
+
+</LinearLayout>

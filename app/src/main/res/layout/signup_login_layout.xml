@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    style="@style/AppModalStyle"
+    >
+
+    <TextView
+        android:id="@+id/page_title_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="@dimen/common_margin"
+        android:gravity="center"
+        android:text="@string/signup"
+        android:textColor="@color/black"
+        android:textFontWeight="@integer/weight_400"
+        android:textSize="@dimen/text_large_30"
+        app:layout_constraintEnd_toStartOf="@id/close_btn"
+        app:layout_constraintHorizontal_chainStyle="spread_inside"
+        app:layout_constraintStart_toStartOf="@id/guideline_ver_start"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/close_btn"
+        android:layout_width="@dimen/common_icon_size"
+        android:layout_height="@dimen/common_icon_size"
+        app:layout_constraintEnd_toStartOf="@+id/guideline_ver_end"
+        app:layout_constraintStart_toEndOf="@+id/page_title_txt"
+        app:layout_constraintTop_toTopOf="@+id/guideline_hor_top"
+        android:src="@drawable/baseline_close_24"
+        />
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/name_edt"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/edit_text_size"
+        android:layout_marginTop="@dimen/common_margin"
+        app:layout_constraintStart_toStartOf="@id/guideline_ver_start"
+        app:layout_constraintEnd_toEndOf="@id/guideline_ver_end"
+        app:layout_constraintTop_toBottomOf="@+id/page_title_txt"
+        android:hint="@string/name"
+        android:textColor="@color/black"
+        android:textColorHint="@color/grey"
+        android:inputType="text"
+        />
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/email_edt"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/edit_text_size"
+        android:layout_marginTop="@dimen/common_margin_between_edt"
+        app:layout_constraintStart_toStartOf="@id/guideline_ver_start"
+        app:layout_constraintEnd_toEndOf="@id/guideline_ver_end"
+        app:layout_constraintTop_toBottomOf="@+id/name_edt"
+        android:hint="@string/email"
+        android:textColor="@color/black"
+        android:textColorHint="@color/grey"
+        android:inputType="textEmailAddress"
+        />
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/password_edt"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/edit_text_size"
+        android:layout_marginTop="@dimen/common_margin_between_edt"
+        app:layout_constraintStart_toStartOf="@id/guideline_ver_start"
+        app:layout_constraintEnd_toEndOf="@id/guideline_ver_end"
+        app:layout_constraintTop_toBottomOf="@+id/email_edt"
+        android:hint="@string/password"
+        android:inputType="textPassword"
+        android:textColor="@color/black"
+        android:textColorHint="@color/grey"
+        android:layout_marginBottom="@dimen/common_margin_between_edt_and_btn"
+        app:layout_constraintBottom_toTopOf="@id/signup_login_btn"
+        />
+
+    <com.example.trello.commomWidgets.CurvedButton
+        android:id="@+id/signup_login_btn"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/common_button_size"
+        android:layout_marginHorizontal="@dimen/common_margin"
+        app:buttonBackgroundColor="@color/blue"
+        app:buttonFontSize="@dimen/text_small_6"
+        app:buttonTextColor="@color/white"
+        app:cbButtonBackground="@drawable/curved_border_bg"
+        app:cbButtonTitle="@string/signup"
+        app:layout_constraintBottom_toTopOf="@+id/guideline_hor_end"
+        app:layout_constraintEnd_toStartOf="@+id/guideline_ver_end"
+        app:layout_constraintStart_toStartOf="@+id/guideline_ver_start"
+        app:loaderColor="@color/white" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_ver_end"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_end="@dimen/common_margin" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_ver_start"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="@dimen/common_margin" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_hor_top"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="@dimen/common_margin" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_hor_end"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_end="@dimen/common_margin" />
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:id="@+id/contextMenuItemSnackbarHost"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        />
+</androidx.constraintlayout.widget.ConstraintLayout>

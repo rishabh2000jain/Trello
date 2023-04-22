@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".features.authentication.AuthActivity"
+    android:orientation="vertical"
+    android:background="@color/blue"
+    >
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/text_large_30"
+        android:textColor="@color/white"
+        android:text="@string/app_name"
+        android:gravity="center"
+        android:textFontWeight="@integer/weight_700"
+        android:layout_marginVertical="@dimen/common_margin"
+        />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_task_image"
+        android:scaleType="center"
+        android:layout_marginHorizontal="@dimen/common_margin"
+
+        />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/text_medium_20"
+        android:textColor="@color/white"
+        android:text="@string/get_more_done"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:layout_marginVertical="8dp"
+        android:textFontWeight="@integer/weight_500"
+        android:layout_marginHorizontal="@dimen/common_margin"
+
+        />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/text_medium_15"
+        android:textColor="@color/white"
+        android:text="@string/auth_desc"
+        android:textStyle="normal"
+        android:gravity="center"
+        android:textFontWeight="@integer/weight_300"
+        android:layout_marginVertical="8dp"
+        android:layout_marginHorizontal="@dimen/common_margin"
+
+        />
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.1"
+        />
+    <com.example.trello.commomWidgets.CurvedButton
+        android:id="@+id/login_btn"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:buttonBackgroundColor="@color/blue"
+        app:cbButtonBackground="@drawable/curved_bg"
+        app:cbButtonTitle="@string/login"
+        app:buttonTextColor ="@color/blue"
+        app:buttonFontSize="@dimen/text_small_6"
+        app:loaderColor="@color/white"
+        android:layout_marginHorizontal="@dimen/common_margin"
+
+        />
+    <com.example.trello.commomWidgets.CurvedButton
+        android:id="@+id/signup_btn"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:buttonBackgroundColor="@color/blue"
+        app:cbButtonBackground="@drawable/curved_border_bg"
+        app:cbButtonTitle="@string/signup"
+        app:buttonTextColor ="@color/white"
+        app:buttonFontSize="@dimen/text_small_6"
+        app:loaderColor="@color/white"
+        android:layout_marginTop="@dimen/common_margin_10"
+        android:layout_marginHorizontal="@dimen/common_margin"
+        android:layout_marginBottom="@dimen/common_margin"
+        />
+</LinearLayout>

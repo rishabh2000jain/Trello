@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="CurvedButton">
+        <attr name="buttonBackgroundColor" format="color"/>
+        <attr name= "cbButtonBackground" format="reference"/>
+        <attr name="cbButtonTitle" format="string"/>
+        <attr name="buttonTextColor" format="color"/>
+        <attr name="buttonFontSize" format="dimension"/>
+        <attr name="loaderColor" format="color"/>
+    </declare-styleable>
+</resources>
